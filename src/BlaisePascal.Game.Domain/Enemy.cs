@@ -1,4 +1,4 @@
-﻿namespace BlaisePascal.LessonsExamples3E.Domain
+﻿namespace BlaisePascal.Game.Domain
 {
     public class Enemy
     {
@@ -54,11 +54,11 @@
         /// <param name="damage"></param>
         public void TakeDamage(int damage)
         {
-            if (damage > 0)
+            if (damage >= 0)
             {
                 Health -= damage;
             }
+            else throw new ArgumentException("Cannot take negative damage");
         }
-
     }
 }

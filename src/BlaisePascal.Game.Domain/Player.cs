@@ -67,16 +67,18 @@ public class Player
     public bool IsAlive { get; private set; }
     public int Gold { get; private set; }
 
-    public void AddExperience(int experience)
+    public void AddExperience(int experiencetoAdd)
     {
-        if (experience > 0)
+        if (experiencetoAdd >= 0)
         {
-            while (Experience + experience >= 100)
+            while (Experience + experiencetoAdd >= 100)
             {
                 Level += 1;
-                experience -= 100;
+                experiencetoAdd -= 100;
             }
         }
+        else throw new ArgumentException("Cannot add negative experience");
+
     }
     public void ResetExperience()
     {
@@ -89,7 +91,8 @@ public class Player
 
     public void Heal(int healthHealed)
     {
-        Health += healthHealed;
+        if (healthHealed > 0) Health += healthHealed;
+        else throw new ArgumentException("Cannot heal by negative values");
     }
 
     public void AddGold(int addedGold)
