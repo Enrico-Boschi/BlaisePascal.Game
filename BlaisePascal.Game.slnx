@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="BlaisePascal.Game.Console/BlaisePascal.Game.Console.csproj" Id="c869c62f-9e5b-4b96-a578-e12e0500a935" />
+    <Project Path="src/BlaisePascal.Game.Domain/BlaisePascal.Game.Domain.csproj" Id="a4a1a267-1e8e-4121-bf0a-58abb2547c73" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BlaisePascal.Game.Tests/BlaisePascal.Game.Tests.csproj" Id="36e995f8-fbfc-4d30-a74b-40a7071f1194" />
+  </Folder>
+</Solution>
